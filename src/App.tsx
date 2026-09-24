@@ -5,11 +5,11 @@ import imgImage2 from './assets/imgImage2.png'
 import imgEllipse1 from './assets/imgEllipse1.png'
 import imgIcon from './assets/imgIcon.svg'
 import imgVector from './assets/imgVector.svg'
+import imgBackgroundPixelSky from './assets/background-pixel-sky.png'
 
 const PORTRAIT = imgImage2
 const PROFILE = imgEllipse1
-const BACKDROP =
-  'https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&h=1000&fit=crop&auto=format'
+const BACKDROP = imgBackgroundPixelSky
 
 function Chevron({ back = false }: { back?: boolean }) {
   return (
@@ -114,6 +114,7 @@ export default function App() {
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{
           backgroundImage: `linear-gradient(rgba(15,16,29,0.55),rgba(15,16,29,0.82)), url('${BACKDROP}')`,
+          imageRendering: 'pixelated',
         }}
       />
 
