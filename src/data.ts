@@ -8,7 +8,7 @@ export const RUUKIA_LINKS: Record<string, string | null> = {
   telegrambot: 'https://t.me/ruukiabot',
   privacy: 'https://privacy.com.br/checkout/ruukialol',
   onlyfans: null,
-  fatalmodels: null,
+  fatalfans: 'https://fatalfans.com/ruukialol',
   fansly: null,
   discord: 'https://discord.gg/75w35Vry4',
   eloqueen: 'https://eloqueens.com.br/queens/ruukia-8',
@@ -47,10 +47,20 @@ export type LinkEntry = {
   tint: string
   logo?: string
   highlight?: boolean
+  ctaLabel?: string
 }
 
 /* Área de links exclusivos. `logo` usa o asset real quando disponível. */
 export const linkEntries: LinkEntry[] = [
+  {
+    key: 'fatalfans',
+    name: 'FatalFans',
+    description: 'MEU CONTEÚDO EXCLUSIVO ESTÁ AQUI 🔥',
+    tint: '#111',
+    logo: imgImage7,
+    highlight: true,
+    ctaLabel: 'Acessar',
+  },
   { key: 'privacy', name: 'Privacy', description: 'O MELHOR DE MIM ESTÁ AQUI 🔥', tint: '#f8317f', logo: imgImage5, highlight: true },
   { key: 'eloqueen', name: 'Eloqueen', description: 'TENHA A EXPERIÊNCIA DE JOGAR DUO COMIGO 💕', tint: '#7c5cff', logo: imgImage10, highlight: true },
   {
@@ -62,7 +72,6 @@ export const linkEntries: LinkEntry[] = [
   },
   { key: 'telegramgroup', name: 'Telegram', description: 'PRÉVIAS 🥵', tint: '#29a9eb' },
   { key: 'fansly', name: 'Fansly', description: 'Conteúdos exclusivos', tint: '#1da5f2' },
-  { key: 'fatalmodels', name: 'Fatal Models', description: 'Conteúdos exclusivos', tint: '#111', logo: imgImage7 },
   { key: 'onlyfans', name: 'OnlyFans', description: 'Conteúdos exclusivos', tint: '#00aff0', logo: imgImage6 },
 ]
 

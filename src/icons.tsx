@@ -88,7 +88,7 @@ export const platformGlyph: Record<string, ReactNode> = {
   telegrambot: <TelegramGlyph className="h-6 w-6" />,
   privacy: <HeartGlyph className="h-6 w-6" />,
   onlyfans: <Lettermark label="OF" className="text-lg" />,
-  fatalmodels: <Lettermark label="FM" className="text-base" />,
+  fatalfans: <Lettermark label="FF" className="text-base" />,
   fansly: <Lettermark label="Fa" className="text-lg" />,
   discord: <DiscordGlyph className="h-6 w-6" />,
   eloqueen: <ControllerGlyph className="h-6 w-6" />,

@@ -72,7 +72,13 @@ body {
   }
 }
 .link-glow {
-  animation: card-glow 2.8s ease-in-out infinite;
+  box-shadow: 0 0 0 1px rgba(62, 16, 102, 0.55), 0 0 24px 1px rgba(62, 16, 102, 0.38);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .link-glow {
+    animation: card-glow 2.8s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

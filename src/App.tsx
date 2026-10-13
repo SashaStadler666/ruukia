@@ -157,8 +157,8 @@ function HomeView({ go }: { go: (h: string) => void }) {
       >
         <img src={imgIcon} width={44} height={44} alt="" className="shrink-0" />
         <span className="min-w-0 flex-1">
-          <strong className="block text-sm font-semibold">Novidades exclusivas · 18+</strong>
-          <span className="block text-sm text-muted">Confira o conteúdo da Ruukia</span>
+          <strong className="block text-sm font-semibold">Ruukia no FatalFans · 18+</strong>
+          <span className="block text-sm text-muted">Acesse meu conteúdo exclusivo</span>
         </span>
         <Chevron />
       </a>
@@ -255,7 +255,7 @@ function HomeView({ go }: { go: (h: string) => void }) {
         className="mt-6 flex min-h-12 items-center justify-center gap-3 rounded-xl border border-line bg-[rgba(30,32,48,0.78)] px-4 py-2.5 text-sm font-medium transition-colors hover:bg-[#343c55]"
       >
         <span className="rounded-[5px] border border-[#a4acc3] px-1.5 py-0.5 text-xs font-bold">18+</span>
-        <span>Explorar conteúdo exclusivo</span>
+        <span>Ver FatalFans e outros links</span>
         <Chevron />
       </a>
       <p className="mt-2.5 text-center text-xs text-muted">A área exclusiva é para maiores de 18 anos.</p>
@@ -345,7 +345,14 @@ function LinksView({ go }: { go: (h: string) => void }) {
                 <span className="mt-0.5 block text-[12px] uppercase text-muted">{entry.description}</span>
               </span>
               {url ? (
-                <Chevron />
+                <span className="flex shrink-0 items-center gap-2">
+                  {entry.ctaLabel && (
+                    <span className="rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-xs font-semibold text-white">
+                      {entry.ctaLabel}
+                    </span>
+                  )}
+                  <Chevron />
+                </span>
               ) : (
                 <span className="shrink-0 rounded-md border border-line px-2 py-1 text-xs text-muted">
                   Em breve
@@ -354,7 +361,7 @@ function LinksView({ go }: { go: (h: string) => void }) {
             </>
           )
           const base =
-            'flex min-h-[88px] items-center gap-4 rounded-[17px] border p-3.5 transition-all'
+            'flex min-h-[88px] items-center gap-4 rounded-[17px] border p-3.5 transition-[transform,background-color,border-color,box-shadow] duration-150'
           if (!url) {
             return (
               <div
@@ -372,7 +379,7 @@ function LinksView({ go }: { go: (h: string) => void }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${entry.name}: ${entry.description} (abre em nova aba)`}
-              className={`${base} bg-[#38475f] hover:-translate-y-0.5 hover:bg-[#415570] ${
+              className={`${base} bg-[#38475f] hover:bg-[#415570] motion-safe:hover:-translate-y-0.5 motion-safe:active:scale-[0.96] ${
                 entry.highlight
                   ? 'link-glow border-[#3e106688] bg-[#42245c]'
                   : 'border-[#839ac24d] hover:border-[#a8c8ff88]'
