@@ -52,6 +52,7 @@ export type LinkEntry = {
 
 /* Área de links exclusivos. `logo` usa o asset real quando disponível. */
 export const linkEntries: LinkEntry[] = [
+  { key: 'privacy', name: 'Privacy', description: 'O MELHOR DE MIM ESTÁ AQUI 🔥', tint: '#f8317f', logo: imgImage5, highlight: true },
   {
     key: 'fatalfans',
     name: 'FatalFans',
@@ -61,7 +62,6 @@ export const linkEntries: LinkEntry[] = [
     highlight: true,
     ctaLabel: 'Acessar',
   },
-  { key: 'privacy', name: 'Privacy', description: 'O MELHOR DE MIM ESTÁ AQUI 🔥', tint: '#f8317f', logo: imgImage5, highlight: true },
   { key: 'eloqueen', name: 'Eloqueen', description: 'TENHA A EXPERIÊNCIA DE JOGAR DUO COMIGO 💕', tint: '#7c5cff', logo: imgImage10, highlight: true },
   {
     key: 'telegrambot',
